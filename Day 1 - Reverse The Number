@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+int reverse(int a){
+    
+    int r=0,n=0;
+    while (a>0)    
+        {
+            r=a%10;  // here we are taking the remainder 
+            n=n*10+r;// here we multily the remainder (which is initialized with 0)  with 10 where and add the remainder to reverse the number
+            a/=10;//  divide the num by 10
+        }
+    return n;   
+    
+}
+
+int main() {
+	int t;
+    cin>>t;
+    while(t--){
+        int x;
+        cin>>x;
+        cout << reverse(x) <<endl;//used the function to reverse the num
+    }
+    return 0;
+
+}
