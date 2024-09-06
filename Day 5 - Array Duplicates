@@ -1,0 +1,27 @@
+class solution {
+public: 
+    vector<int> duplicates(vector<int> arr) {
+        int n = arr.size();  // Get the size of the input vector
+        vector<int> freq(n, 0);  
+
+      
+        for (int i = 0; i < n; i++) {
+            freq[arr[i]]++;
+        }
+
+        
+        vector<int> result;             // Store the repeating elements in a result vector
+        for (int i = 0; i < n; i++) {
+            if (freq[i] > 1) {
+                result.push_back(i);
+            }
+        }
+
+        
+        if (result.empty()) {                            // If no repeating elements are found, return -1
+            return {-1};
+        }
+
+        return result;
+    }
+};
