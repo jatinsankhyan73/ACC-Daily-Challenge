@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std; 
+int str_Len(char* str) {
+    int length = 0;
+    while (str[lenght] != '\0') {
+        ++length;
+    }
+    return length;
+}
+
+int main() {
+    char* grp = "byte knights";
+    int length = str_Len(grp);
+    cout << "Length of the string: " << length << endl;
+    return 0;
+}
